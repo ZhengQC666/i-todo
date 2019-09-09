@@ -1,0 +1,102 @@
+$blue_color: #00b0f0;
+$blue_hover_color: #08aae5;
+
+$green_color: #00d1b2;
+$green_hover_color: #18c2a9;
+
+$gray_color: #888888;
+$gray_hover_color: #888888;
+
+$cyan_color: #26b6be;
+$cyan_hover_color: #1facb4;
+
+$skyblue_color: #91f0f3;
+$skyblue_hover_color: #9de0f5;
+
+$yellow_color: #f4b977;
+$yellow_hover_color: #e9ae69;
+
+@mixin theme($bg, $bg_hover) {
+  header {
+    background: $bg;
+  }
+  .panel {
+    .option-btn {
+      border: 1px solid $bg;
+      background: $bg;
+      &:hover {
+        background: $bg_hover;
+      }
+    }
+  }
+  .add-data {
+    .add-input:focus {
+      border-color: $bg;
+    }
+    .add-btn {
+      border: 1px solid $bg;
+      background: $bg;
+      &:hover {
+        background: $bg_hover;
+      }
+    }
+  }
+  .data-list {
+    .list-table {
+      background: $bg;
+    }
+    .list-box {
+      .event-list {
+        .cancel-btn:hover {
+          border: 1px solid $bg;
+          color: $bg;
+        }
+      }
+    }
+  }
+  .event-all {
+    .table-box {
+      .edit-input,
+      .event-table {
+        button {
+          background: $bg;
+        }
+      }
+    }
+  }
+  .dialog {
+    .dialog-btn {
+      .sure-btn {
+        border: 1px solid $bg;
+        background: $bg;
+        &:hover {
+          background: $bg_hover;
+        }
+      }
+    }
+  }
+}
+
+.blue {
+  @include theme(#{$blue_color}, #{$blue_hover_color});
+}
+
+.green {
+  @include theme(#{$green_color}, #{$green_hover_color});
+}
+
+.gray {
+  @include theme(#{$gray_color}, #{$gray_hover_color});
+}
+
+.darkcyan {
+  @include theme(#{$cyan_color}, #{$cyan_hover_color});
+}
+
+.skyblue {
+  @include theme(#{$skyblue_color}, #{$skyblue_hover_color});
+}
+
+.yellow {
+  @include theme(#{$yellow_color}, #{$yellow_hover_color});
+}
